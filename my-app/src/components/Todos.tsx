@@ -1,5 +1,6 @@
 import React from "react";
 import Todo from "../models/todo";
+import TodoListItem from "./TodoListItem";
 
 /**
  * 리액트의 컴포넌트를 제네릭 타입의 함수로 지정하여 사용
@@ -12,7 +13,7 @@ const Todos: React.FC<{ items: Todo[] }> = (props) => {
   return (
     <ul>
       {props.items.map((item) => (
-        <li key={item.id}>{item.text}</li>
+        <TodoListItem key={item.id} text={item.text} />
       ))}
     </ul>
   );
