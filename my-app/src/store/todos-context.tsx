@@ -39,7 +39,7 @@ const TodosContextProvider: React.FC = (props) => {
 
   return (
     <TodosContext.Provider value={contextValue}>
-      {props}
+      {props.children}
     </TodosContext.Provider>
   );
 };
